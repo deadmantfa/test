@@ -1,0 +1,875 @@
+2013/06/12 16:35:10 [error] [php] include(Users.php): failed to open stream: No such file or directory (/var/www-protected/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/test/protected/components/UserIdentity.php(21): spl_autoload_call()
+#1 /var/www/test/protected/models/LoginForm.php(52): UserIdentity->authenticate()
+#2 /var/www-protected/yii/framework/validators/CInlineValidator.php(42): LoginForm->authenticate()
+#3 /var/www-protected/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#4 /var/www-protected/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#5 /var/www/test/protected/controllers/SiteController.php(94): LoginForm->validate()
+#6 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#8 /var/www-protected/yii/framework/web/CController.php(286): SiteController->runAction()
+#9 /var/www-protected/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#10 /var/www-protected/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#11 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#12 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#13 /var/www/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/test/index.php?r=site/login
+in /var/www/test/protected/components/UserIdentity.php (21)
+in /var/www/test/protected/models/LoginForm.php (52)
+in /var/www/test/protected/controllers/SiteController.php (94)
+2013/06/12 16:36:06 [error] [php] Undefined variable: users (/var/www/test/protected/components/UserIdentity.php:24)
+Stack trace:
+#0 /var/www-protected/yii/framework/validators/CValidator.php(213): CInlineValidator->validateAttribute()
+#1 /var/www-protected/yii/framework/base/CModel.php(159): CInlineValidator->validate()
+#2 /var/www/test/protected/controllers/SiteController.php(94): LoginForm->validate()
+#3 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#4 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /var/www-protected/yii/framework/web/CController.php(286): SiteController->runAction()
+#6 /var/www-protected/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#8 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#10 /var/www/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/test/index.php?r=site/login
+in /var/www/test/protected/components/UserIdentity.php (24)
+in /var/www/test/protected/models/LoginForm.php (52)
+in /var/www/test/protected/controllers/SiteController.php (94)
+2013/06/12 17:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest01".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('AjaxModule/ajax...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/AjaxModule/ajax/reqTest01
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/12 17:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest02".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('AjaxModule/ajax...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/AjaxModule/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/12 17:01:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest03".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('AjaxModule/ajax...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/AjaxModule/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/12 17:01:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest01".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('AjaxModule/ajax...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/AjaxModule/ajax/reqTest01
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/12 17:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest01".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('AjaxModule/ajax...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/AjaxModule/ajax/reqTest01
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 17:04:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/beae2482/css/src/grid.png".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/beae2482...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/assets/beae2482/css/src/grid.png
+---
+2013/06/12 17:06:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/Ajax')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/Ajax
+HTTP_REFERER=http://localhost/test/gii/controller
+---
+2013/06/12 17:08:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest01".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('AjaxModule/ajax...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/AjaxModule/ajax/reqTest01
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/12 17:08:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest01".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('AjaxModule/ajax...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/AjaxModule/ajax/reqTest01
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/12 21:03:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:03:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:03:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:07:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/beae2482/css/src/grid.png".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/beae2482...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/assets/beae2482/css/src/grid.png
+---
+2013/06/12 21:10:07 [error] [php] include(Content.php): failed to open stream: No such file or directory (/var/www-protected/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): spl_autoload_call()
+#1 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www-protected/yii/framework/web/CController.php(286): AjaxController->runAction()
+#4 /var/www-protected/yii/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): AjaxController->run()
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+in /var/www/test/protected/modules/Ajax/controllers/AjaxController.php (12)
+in /var/www/test/index.php (13)
+2013/06/12 21:10:21 [error] [php] include(Content.php): failed to open stream: No such file or directory (/var/www-protected/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): spl_autoload_call()
+#1 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www-protected/yii/framework/web/CController.php(286): AjaxController->runAction()
+#4 /var/www-protected/yii/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): AjaxController->run()
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+in /var/www/test/protected/modules/Ajax/controllers/AjaxController.php (12)
+in /var/www/test/index.php (13)
+2013/06/12 21:10:37 [error] [php] include(Content.php): failed to open stream: No such file or directory (/var/www-protected/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): spl_autoload_call()
+#1 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www-protected/yii/framework/web/CController.php(286): AjaxController->runAction()
+#4 /var/www-protected/yii/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): AjaxController->run()
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+in /var/www/test/protected/modules/Ajax/controllers/AjaxController.php (12)
+in /var/www/test/index.php (13)
+2013/06/12 21:11:58 [error] [php] include(Content.php): failed to open stream: No such file or directory (/var/www-protected/yii/framework/YiiBase.php:421)
+Stack trace:
+#0 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): spl_autoload_call()
+#1 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /var/www-protected/yii/framework/web/CController.php(286): AjaxController->runAction()
+#4 /var/www-protected/yii/framework/web/CController.php(265): AjaxController->runActionWithFilters()
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): AjaxController->run()
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CWebApplication->run()
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+in /var/www/test/protected/modules/Ajax/controllers/AjaxController.php (12)
+in /var/www/test/index.php (13)
+2013/06/12 21:14:14 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:15:05 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:15:12 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:15:13 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:16:56 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:16:59 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:17:24 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:17:31 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:17:59 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:18:52 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:05 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:07 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:11 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:14 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:16 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:26 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:28 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:19:40 [error] [exception.CException] exception 'CException' with message 'Property "Content.count" is not defined.' in /var/www-protected/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www-protected/yii/framework/db/ar/CActiveRecord.php(143): CComponent->__get('count')
+#1 /var/www/test/protected/modules/Ajax/controllers/AjaxController.php(12): CActiveRecord->__get('count')
+#2 /var/www-protected/yii/framework/web/actions/CInlineAction.php(49): AjaxController->actionReqTest02()
+#3 /var/www-protected/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest02')
+#7 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#8 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#9 /var/www/test/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest02
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/12 21:20:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/
+---
+2013/06/14 16:11:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "manifest.appacache".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('manifest.appaca...')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/manifest.appacache
+---
+2013/06/14 16:12:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "manifest.appcache" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('manifest.appcac...')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/manifest.appcache
+---
+2013/06/14 16:25:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/*".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/*')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/css/*
+---
+2013/06/14 16:25:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/*".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/*')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/css/*
+---
+2013/06/14 16:26:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/*".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/*')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/assets/*
+---
+2013/06/14 16:26:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/*.css".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/*.css')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/css/*.css
+---
+2013/06/14 16:26:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/*.*".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/*.*')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/assets/*.*
+---
+2013/06/14 16:26:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "css/*.css".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('css/*.css')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/css/*.css
+---
+2013/06/14 16:26:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/*.*".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/*.*')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/assets/*.*
+---
+2013/06/14 16:29:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/14 16:29:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/14 16:29:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/14 16:59:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "reqTest03".' in /var/www-protected/yii/framework/web/CController.php:483
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CController.php(270): CController->missingAction('reqTest03')
+#1 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('reqTest03')
+#2 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('Ajax/ajax/reqTe...')
+#3 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#4 /var/www/test/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/test/Ajax/ajax/reqTest03
+HTTP_REFERER=http://localhost/test/site/index
+---
+2013/06/14 20:35:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:40:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:41:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:42:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:42:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:42:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:43:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:43:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:45:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:45:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:45:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:46:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:46:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:46:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested view "ab" was not found.' in /var/www-protected/yii/framework/web/actions/CViewAction.php:112
+Stack trace:
+#0 /var/www-protected/yii/framework/web/actions/CViewAction.php(123): CViewAction->resolveView('ab')
+#1 /var/www-protected/yii/framework/web/actions/CAction.php(74): CViewAction->run()
+#2 /var/www-protected/yii/framework/web/CController.php(308): CAction->runWithParams(Array)
+#3 /var/www-protected/yii/framework/web/CController.php(286): CController->runAction(Object(CViewAction))
+#4 /var/www-protected/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CViewAction), Array)
+#5 /var/www-protected/yii/framework/web/CWebApplication.php(282): CController->run('page')
+#6 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('site/page/view/...')
+#7 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#8 /var/www/test/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/test/site/page/view/ab
+---
+2013/06/14 20:48:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/15.jpg".' in /var/www-protected/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /var/www-protected/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('images/15.jpg')
+#1 /var/www-protected/yii/framework/base/CApplication.php(168): CWebApplication->processRequest()
+#2 /var/www/test/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/test/images/15.jpg
+HTTP_REFERER=http://localhost/test/
+---
