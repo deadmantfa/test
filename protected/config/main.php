@@ -1,10 +1,4 @@
 <?php
-
-// uncomment the following to define a path alias
-// Yii::setPathOfAlias('local','path/to/local-folder');
-
-// This is the main Web application configuration. Any writable
-// CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'ePaisa Test project',
@@ -51,6 +45,9 @@ return array(
 		),
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=test',
+			'schemaCachingDuration'=>3600,
+			'enableProfiling'=>true,
+			'enableParamLogging'=> true,
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'admin',
@@ -60,6 +57,20 @@ return array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
 		),
+
+		'cache'=>array(
+			'class'=>'system.caching.CMemCache',
+			'servers'=>array(
+				array('host'=>'localhost', 'port'=>11211, 'weight'=>80),
+			),
+		),
+		'session'=>array(
+			'class'=>'CCacheHttpSession',
+			'cacheID'=>'sessionCache',
+		),
+		'sessionCache'=>array(
+			'class'=>'CApcCache'
+		),
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(
@@ -67,12 +78,12 @@ return array(
 					'class'=>'CFileLogRoute',
 					'levels'=>'error, warning',
 				),
-				// uncomment the following to show log messages on web pages
-				/*
-				array(
-					'class'=>'CWebLogRoute',
-				),
-				*/
+//				array(
+//					'class'=>'CWebLogRoute',
+//				),
+//				array(
+//					'class'=>'CProfileLogRoute',
+//				),
 			),
 		),
 	),

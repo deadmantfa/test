@@ -2,18 +2,40 @@
 
 class AjaxController extends Controller
 {
+	public function filters()
+	{
+	}
 	public function actionReqTest01()
 	{
 		echo '<h2 class="time">'.date('H:i:s')."</h2>";
 		Yii::app()->end();
 	}
+
+	/* MemCache Example */
 	public function actionReqTest02()
 	{
-		$modelCount = Content::model()->count();
+		$cache = Yii::app()->cache;
+		if($cache->get('modelCount')!==false){
+			$modelCount = $cache->get('modelCount');
+		} else {
+			$modelCount = Content::model()->count();
+			if($modelCount != null)
+				$cache->set('modelCount', $modelCount,800);
+		}
+
 		$randKey = rand(1,$modelCount);
 
-		$model = Content::model()->findByPk(array($randKey));
-		echo '<blockquote><p>'.trim($model->content).'</p></blockquote><div class="att"><p class="author">'.trim($model->author).'</p></div>';
+		if($cache->get($randKey)!==false){
+			$model=$cache->get($randKey);
+		} else {
+			$model = Content::model()->findByPk(array($randKey));
+		}
+		if($model != null){
+			if(isset($randKey))
+				$cache->set($randKey,$model,300);
+			echo '<blockquote><p>'.trim($model->content).'</p></blockquote><div class="att"><p class="author">'.trim($model->author).'</p></div>';
+		}
+
 		Yii::app()->end();
 	}
 
