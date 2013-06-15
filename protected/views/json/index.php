@@ -5,9 +5,25 @@ $this->breadcrumbs=array(
 	'Json',
 );
 ?>
-<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
+<h1>JSON + jQuery Example</h1>
+<table id="data">
+	<thead>
+		<tr>
+			<th>Bank Id</th>
+			<th>Bank Name</th>
+			<th>Bank Address</th>
+			<th>Bank Logo</th>
+			<th>Bank Processor</th>
 
-<p>
-	You may change the content of this page by modifying
-	the file <tt><?php echo __FILE__; ?></tt>.
-</p>
+		</tr>
+	</thead>
+	<tbody>
+	</tbody>
+</table>
+
+<?php
+	echo CHtml::button("You want some more huh!!!", array('id'=>'loadMore'));
+	Yii::app()->clientScript->registerCoreScript('jquery');
+	Yii::app()->clientScript->registerScriptFile(Yii::app()->assetManager->publish(Yii::getPathOfAlias('application.scripts'), false, -1, true).'/json.js', CClientScript::POS_END);
+?>
+
